@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import Typography from "@mui/material/Typography";
 import {
   Button,
@@ -16,25 +17,30 @@ import { Box } from "@mui/system";
 
 const Home = () => {
   const [title, setTitle] = useState("");
-  const [description, setDescription] = useState("");
+  let navigate = useNavigate();
+  const [details, setDetails] = useState("");
   const [category, setCategory] = useState("money");
   const [titleError, setTitleError] = useState(false);
-  const [descriptionError, setDescriptionError] = useState(false);
+  const [detailsError, setDetailsError] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
     setTitleError(false);
-    setDescriptionError(false);
+    setDetailsError(false);
 
     if (title === "") {
       setTitleError(true);
     }
-    if (description === "") {
-      setDescriptionError(true);
+    if (details === "") {
+      setDetailsError(true);
     }
 
-    if (title && description) {
-      console.log(title, description, category);
+    if (title && details) {
+      fetch("http://localhost:8000/notes", {
+        method: "POST",
+        headers: { "Content-type": "application/json" },
+        body: JSON.stringify({ title, details, category }),
+      }).then(() => navigate("/notes"));
     }
   };
 
@@ -55,14 +61,14 @@ const Home = () => {
           error={titleError}
         ></TextField>
         <TextField
-          label="Description"
+          label="Details"
           variant="outlined"
           fullWidth
           multiline
           rows={4}
           required
-          onChange={(e) => setDescription(e.target.value)}
-          error={descriptionError}
+          onChange={(e) => setDetails(e.target.value)}
+          error={detailsError}
         ></TextField>
 
         <FormControl>
