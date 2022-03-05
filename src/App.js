@@ -10,40 +10,123 @@ import {
   Menu,
   MenuItem,
   Toolbar,
-  Typography,
 } from "@mui/material";
 import { Box } from "@mui/system";
-import MenuIcon from "@mui/material/MenuItem";
+import MenuIcon from "@mui/icons-material/Menu";
 import { MaterialUISwitch } from "./buttons/MaterialUISwitch";
 
-const pages = ["Products", "Pricing", "Blog"];
+const pages = ["HOME", "PROJECT", "ABOUT", "CONTACT"];
+
+const ITEM_HEIGHT = 48;
 
 const App = () => {
+  const [anchorEl, setAnchorEl] = React.useState(null);
+
+  const open = Boolean(anchorEl);
+  const handleClick = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
+
   return (
     <React.Fragment>
       <CssBaseline />
-      <AppBar position="static">
-        <Container maxWidth="xl">
+      <AppBar position="static" sx={{ backgroundColor: "#23252f" }}>
+        <Container maxWidth="lg">
           <Toolbar disableGutters>
             {/* medium size */}
-            <Typography
-              variants="h6"
-              noWrap
-              component="div"
-              sx={{ mr: 2, display: { xs: "none", md: "flex" } }}
+            <Box sx={{ flexGrow: 0, display: { xs: "none", md: "flex" } }}>
+              <img
+                src="../../images/Vector.svg"
+                alt="Yohanes Silitonga"
+                style={{ height: "3rem", cursor: "pointer" }}
+              />
+            </Box>
+
+            <Box
+              sx={{
+                flexGrow: 1,
+                display: { xs: "none", md: "flex" },
+                marginLeft: "1.6rem",
+                justifyContent: "flex-end",
+              }}
             >
-              Yohanes
-            </Typography>
-            <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
               {pages.map((page) => (
                 <Button
+                  variant="body1"
                   key={page}
-                  sx={{ my: 2, color: "white", display: "block" }}
+                  sx={{
+                    color: "white",
+                    ":hover": {
+                      color: "#fede2b",
+                      // backgroundColor: "#454370",
+                    },
+                    transition: "color 0.5s",
+                    fontWeight: "semibold",
+                  }}
+                  underline="hover"
                 >
                   {page}
                 </Button>
               ))}
             </Box>
+
+            {/* Responsive */}
+            <Box
+              sx={{
+                flexGrow: 1,
+                display: { xs: "flex", md: "none" },
+              }}
+            >
+              <IconButton
+                aria-label="more"
+                id="long-button"
+                aria-controls={open ? "long-menu" : undefined}
+                aria-expanded={open ? "true" : undefined}
+                aria-haspopup="true"
+                onClick={handleClick}
+                sx={{ color: "white" }}
+              >
+                <MenuIcon />
+              </IconButton>
+              <Menu
+                id="long-menu"
+                MenuListProps={{
+                  "aria-labelledby": "long-button",
+                }}
+                anchorEl={anchorEl}
+                open={open}
+                onClose={handleClose}
+                PaperProps={{
+                  style: {
+                    maxHeight: ITEM_HEIGHT * 4.5,
+                    width: "20ch",
+                  },
+                }}
+              >
+                {pages.map((option) => (
+                  <MenuItem
+                    key={option}
+                    selected={option === "Pyxis"}
+                    onClick={handleClose}
+                  >
+                    {option}
+                  </MenuItem>
+                ))}
+              </Menu>
+            </Box>
+
+            <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
+              <img
+                src="../../images/Vector.svg"
+                alt="Yohanes Silitonga"
+                style={{ height: "2rem", cursor: "pointer" }}
+              />
+            </Box>
+
+            {/* Switch */}
             <Box sx={{ flexGrow: 0 }}>
               <FormGroup>
                 <FormControlLabel
@@ -52,52 +135,6 @@ const App = () => {
                 ></FormControlLabel>
               </FormGroup>
             </Box>
-            {/* <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
-              <IconButton
-                size="large"
-                aria-label="account of current user"
-                aria-controls="menu-appbar"
-                aria-haspopup="true"
-                // onClick={handleOpenNavMenu}
-                color="inherit"
-              >
-                <MenuIcon />
-              </IconButton>
-              <Menu
-                id="menu-appbar"
-                // anchorEl={anchorElNav}
-                anchorOrigin={{
-                  vertical: "bottom",
-                  horizontal: "left",
-                }}
-                keepMounted
-                transformOrigin={{
-                  vertical: "top",
-                  horizontal: "left",
-                }}
-                // open={Boolean(anchorElNav)}
-                // onClose={handleCloseNavMenu}
-                sx={{
-                  display: { xs: "block", md: "none" },
-                }}
-              >
-                {pages.map((page) => (
-                  <MenuItem key={page}>
-                    <Typography textAlign="center">{page}</Typography>
-                  </MenuItem>
-                ))}
-              </Menu>
-            </Box> */}
-
-            {/* Responsive Size */}
-            {/* <Typography
-              variant="h6"
-              noWrap
-              component="div"
-              sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}
-            >
-              Yohanes
-            </Typography> */}
           </Toolbar>
         </Container>
       </AppBar>
