@@ -1,11 +1,21 @@
-import { Button, Container, Typography } from "@mui/material";
+import {
+  Button,
+  Container,
+  IconButton,
+  Stack,
+  Typography,
+} from "@mui/material";
 import { Box } from "@mui/system";
 import React from "react";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
+import EmailIcon from "@mui/icons-material/Email";
+import GitHubIcon from "@mui/icons-material/GitHub";
+import TwitterIcon from "@mui/icons-material/Twitter";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
 
 const Home = () => {
   return (
-    <Box sx={{ backgroundColor: "#23252f", pb: 10, pt: 1 }}>
+    <Box sx={{ backgroundColor: "#23252f", pt: 1 }}>
       <Container maxWidth="lg">
         <Box
           sx={{
@@ -49,6 +59,45 @@ const Home = () => {
               >
                 More About me
               </Button>
+              <Button
+                variant="contained"
+                size="large"
+                sx={{
+                  color: "black",
+                  backgroundColor: "#f2f2f2",
+                  ":hover": {
+                    backgroundColor: "#fede2b",
+                  },
+                  transition: "ease 0.5s",
+                  marginLeft: 2,
+                }}
+              >
+                Resume
+              </Button>
+            </Box>
+            <Box sx={{ paddingTop: 2 }}>
+              <Stack direction="row" spacing={1}>
+                <IconButton aria-label="email">
+                  <EmailIcon
+                    sx={{ color: "#f2f2f2", ":hover": { color: "#fede2b" } }}
+                  />
+                </IconButton>
+                <IconButton aria-label="github">
+                  <GitHubIcon
+                    sx={{ color: "#f2f2f2", ":hover": { color: "#fede2b" } }}
+                  />
+                </IconButton>
+                <IconButton aria-label="twitter">
+                  <TwitterIcon
+                    sx={{ color: "#f2f2f2", ":hover": { color: "#fede2b" } }}
+                  />
+                </IconButton>
+                <IconButton aria-label="linkedIn">
+                  <LinkedInIcon
+                    sx={{ color: "#f2f2f2", ":hover": { color: "#fede2b" } }}
+                  />
+                </IconButton>
+              </Stack>
             </Box>
           </Box>
           <Box
@@ -79,6 +128,7 @@ const Home = () => {
             sx={{
               display: "flex",
               justifyContent: "center",
+              paddingTop: 3,
             }}
           >
             <img
@@ -121,7 +171,7 @@ const Home = () => {
             >
               <Button
                 variant="outlined"
-                size="large"
+                size="medium"
                 sx={{
                   color: "white",
                   ":hover": { paddingLeft: "1rem" },
@@ -131,6 +181,45 @@ const Home = () => {
               >
                 More About me
               </Button>
+              <Button
+                variant="contained"
+                size="medium"
+                sx={{
+                  color: "black",
+                  marginLeft: 2,
+                  backgroundColor: "#f2f2f2",
+                  ":hover": {
+                    backgroundColor: "#fede2b",
+                  },
+                  transition: "ease 0.5s",
+                }}
+              >
+                Resume
+              </Button>
+            </Box>
+            <Box sx={{ paddingTop: 2 }}>
+              <Stack direction="row" spacing={1} justifyContent="center">
+                <IconButton aria-label="email">
+                  <EmailIcon
+                    sx={{ color: "#f2f2f2", ":hover": { color: "#fede2b" } }}
+                  />
+                </IconButton>
+                <IconButton aria-label="github">
+                  <GitHubIcon
+                    sx={{ color: "#f2f2f2", ":hover": { color: "#fede2b" } }}
+                  />
+                </IconButton>
+                <IconButton aria-label="twitter">
+                  <TwitterIcon
+                    sx={{ color: "#f2f2f2", ":hover": { color: "#fede2b" } }}
+                  />
+                </IconButton>
+                <IconButton aria-label="linkedIn">
+                  <LinkedInIcon
+                    sx={{ color: "#f2f2f2", ":hover": { color: "#fede2b" } }}
+                  />
+                </IconButton>
+              </Stack>
             </Box>
           </Box>
         </Box>

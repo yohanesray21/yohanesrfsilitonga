@@ -31,7 +31,7 @@ const Navbar = () => {
 
   return (
     <AppBar
-      position="relative"
+      position="absolute"
       sx={{ backgroundColor: "#23252f", boxShadow: "none" }}
     >
       <Container maxWidth="lg">
