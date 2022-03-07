@@ -150,7 +150,7 @@ const Home = () => {
             <Typography variant="h6" my={3} textAlign="center">
               Hi, my name is
             </Typography>
-            <Typography variant="h3" textAlign="center">
+            <Typography variant="h3" textAlign="center" fontWeight="bold">
               YOHANES R F SILITONGA
             </Typography>
             <Typography variant="h5" mt={2} textAlign="center">
