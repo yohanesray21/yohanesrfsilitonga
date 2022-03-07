@@ -34,7 +34,7 @@ const Home = () => {
             }}
           >
             <Typography variant="h5">Hi, my name is</Typography>
-            <Typography variant="h2" mt={2}>
+            <Typography variant="h3" fontWeight="bold" mt={2}>
               YOHANES R F SILITONGA
             </Typography>
             <Typography variant="h5" mt={2}>
@@ -44,7 +44,7 @@ const Home = () => {
               Lorem Ipsum is simply dummy text of the printing and typesetting
               industry. Lorem Ipsum has been the industry's standard dummy text
               ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book.{" "}
+              type and scrambled it to make a type specimen book.
             </Typography>
             <Box sx={{ marginTop: "2rem" }}>
               <Button

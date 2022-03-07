@@ -3,8 +3,6 @@ import {
   AppBar,
   Button,
   Container,
-  FormControlLabel,
-  FormGroup,
   IconButton,
   Menu,
   MenuItem,
@@ -84,12 +82,7 @@ const Navbar = () => {
             </Box>
 
             <Box sx={{ flexGrow: 0 }}>
-              <FormGroup>
-                <FormControlLabel
-                  control={<MaterialUISwitch defaultChecked />}
-                  label=""
-                ></FormControlLabel>
-              </FormGroup>
+              <MaterialUISwitch defaultChecked />
             </Box>
           </Box>
 
@@ -155,12 +148,7 @@ const Navbar = () => {
 
             {/* Switch */}
             <Box sx={{ display: "flex" }}>
-              <FormGroup>
-                <FormControlLabel
-                  control={<MaterialUISwitch defaultChecked />}
-                  label=""
-                ></FormControlLabel>
-              </FormGroup>
+              <MaterialUISwitch defaultChecked />
             </Box>
           </Box>
         </Toolbar>
