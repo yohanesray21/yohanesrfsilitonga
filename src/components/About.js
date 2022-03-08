@@ -1,53 +1,77 @@
-import { Box, Container, Typography } from "@mui/material";
+import {
+  Box,
+  Container,
+  Fade,
+  FormControlLabel,
+  Paper,
+  Switch,
+  Typography,
+} from "@mui/material";
 import { borderRadius, height } from "@mui/system";
 import React from "react";
+import CollapseButton from "./CollapseButton";
 
 const About = () => {
+  const [checked, setChecked] = React.useState(false);
+
+  const handleChange = () => {
+    setChecked((prev) => !prev);
+  };
+
   return (
-    <Box sx={{ backgroundColor: "#23252f", pb: 10, pt: 1 }}>
+    <Box sx={{ backgroundColor: "primary.dark", pb: 10, pt: 1 }}>
       <Container maxWidth="lg">
+        {/* Desktop */}
         <Box
+          p="0 24px"
+          minHeight="100vh"
           sx={{
-            padding: "0 24px",
-            height: "100vh",
-            display: { xs: "none", md: "flex", flexDirection: "column" },
+            display: {
+              xs: "none",
+              md: "flex",
+              flexDirection: "column",
+            },
           }}
         >
-          <Box>
-            <Typography variant="h4" sx={{ color: "#f2f2f2" }}>
+          <Box display="flex" alignItems="center" justifyContent="center">
+            <Typography variant="h3" sx={{ color: "primary.light" }}>
               About Me
             </Typography>
           </Box>
           <Box sx={{ display: "flex", marginTop: 5 }}>
-            <Box>
+            <Box sx={{ opacity: 0.4, ":hover": { opacity: 1 } }}>
               <img
                 src="../images/picture-1.jpg"
                 style={{
-                  width: "350px",
-                  border: "1px solid #ddd",
-                  borderRadius: "10px",
-                  opacity: "0.2",
+                  width: "300px",
+                  height: "270px",
+                  objectFit: "cover",
+                  border: "2px solid #ddd",
+                  borderRadius: "5px",
                 }}
                 alt="yohanes"
               />
             </Box>
-            <Box sx={{ color: "#f2f2f2", marginLeft: 2 }}>
-              <Typography variant="body1">
+            <Box sx={{ color: "#f2f2f2", marginLeft: 6 }}>
+              <Typography
+                variant="h2"
+                component="h5"
+                mb={5}
+                fontWeight="bold"
+                color="primary.main"
+              >
+                Hello, I'm Yohanes 🙂
+              </Typography>
+              <Typography variant="h5" component="p">
                 Lorem Ipsum is simply dummy text of the printing and typesetting
                 industry. Lorem Ipsum has been the industry's standard dummy
                 text ever since the 1500s, when an unknown printer took a galley
                 of type and scrambled it to make a type specimen book.
-              </Typography>
-              <Typography sx={{ color: "f2f2f2" }}>
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s, when an unknown printer took a galley
-                of type and scrambled it to make a type specimen book.
-              </Typography>
-              <Typography sx={{ color: "f2f2f2" }}>
-                Lorem Ipsum is simply dummy text of the printing.
               </Typography>
             </Box>
+          </Box>
+          <Box>
+            <CollapseButton />
           </Box>
         </Box>
       </Container>

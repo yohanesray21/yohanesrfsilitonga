@@ -30,7 +30,7 @@ const Navbar = () => {
   return (
     <AppBar
       position="absolute"
-      sx={{ backgroundColor: "#23252f", boxShadow: "none" }}
+      sx={{ backgroundColor: "primary.dark", boxShadow: "none" }}
     >
       <Container maxWidth="lg">
         <Toolbar disableGutters>
@@ -69,7 +69,7 @@ const Navbar = () => {
                   sx={{
                     color: "white",
                     ":hover": {
-                      color: "#fede2b",
+                      color: "primary.main",
                     },
                     transition: "color 0.5s",
                     fontWeight: "semibold",

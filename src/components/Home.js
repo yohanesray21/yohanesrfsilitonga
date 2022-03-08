@@ -15,7 +15,7 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 
 const Home = () => {
   return (
-    <Box sx={{ backgroundColor: "#23252f", pt: 1 }}>
+    <Box sx={{ backgroundColor: "primary.dark", pt: 1 }}>
       <Container maxWidth="lg">
         <Box
           sx={{
@@ -34,13 +34,13 @@ const Home = () => {
             }}
           >
             <Typography variant="h5">Hi, my name is</Typography>
-            <Typography variant="h3" fontWeight="bold" mt={2}>
+            <Typography variant="h3" fontWeight="bold" mt={2} color="primary">
               YOHANES R F SILITONGA
             </Typography>
             <Typography variant="h5" mt={2}>
               Frontend Developer
             </Typography>
-            <Typography mt={2}>
+            <Typography variant="h6" mt={2}>
               Lorem Ipsum is simply dummy text of the printing and typesetting
               industry. Lorem Ipsum has been the industry's standard dummy text
               ever since the 1500s, when an unknown printer took a galley of
@@ -51,7 +51,7 @@ const Home = () => {
                 variant="outlined"
                 size="large"
                 sx={{
-                  color: "white",
+                  color: "primary",
                   ":hover": { paddingLeft: "1rem" },
                   transition: "ease 0.3s",
                 }}
@@ -66,7 +66,7 @@ const Home = () => {
                   color: "black",
                   backgroundColor: "#f2f2f2",
                   ":hover": {
-                    backgroundColor: "#fede2b",
+                    backgroundColor: "primary.main",
                   },
                   transition: "ease 0.5s",
                   marginLeft: 2,
@@ -79,22 +79,34 @@ const Home = () => {
               <Stack direction="row" spacing={1}>
                 <IconButton aria-label="email">
                   <EmailIcon
-                    sx={{ color: "#f2f2f2", ":hover": { color: "#fede2b" } }}
+                    sx={{
+                      color: "#f2f2f2",
+                      ":hover": { color: "primary.main" },
+                    }}
                   />
                 </IconButton>
                 <IconButton aria-label="github">
                   <GitHubIcon
-                    sx={{ color: "#f2f2f2", ":hover": { color: "#fede2b" } }}
+                    sx={{
+                      color: "#f2f2f2",
+                      ":hover": { color: "primary.main" },
+                    }}
                   />
                 </IconButton>
                 <IconButton aria-label="twitter">
                   <TwitterIcon
-                    sx={{ color: "#f2f2f2", ":hover": { color: "#fede2b" } }}
+                    sx={{
+                      color: "#f2f2f2",
+                      ":hover": { color: "primary.main" },
+                    }}
                   />
                 </IconButton>
                 <IconButton aria-label="linkedIn">
                   <LinkedInIcon
-                    sx={{ color: "#f2f2f2", ":hover": { color: "#fede2b" } }}
+                    sx={{
+                      color: "#f2f2f2",
+                      ":hover": { color: "primary.main" },
+                    }}
                   />
                 </IconButton>
               </Stack>
@@ -150,7 +162,12 @@ const Home = () => {
             <Typography variant="h6" my={3} textAlign="center">
               Hi, my name is
             </Typography>
-            <Typography variant="h3" textAlign="center" fontWeight="bold">
+            <Typography
+              variant="h3"
+              textAlign="center"
+              fontWeight={700}
+              color="primary"
+            >
               YOHANES R F SILITONGA
             </Typography>
             <Typography variant="h5" mt={2} textAlign="center">
@@ -160,7 +177,7 @@ const Home = () => {
               Lorem Ipsum is simply dummy text of the printing and typesetting
               industry. Lorem Ipsum has been the industry's standard dummy text
               ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book.{" "}
+              type and scrambled it to make a type specimen book.
             </Typography>
             <Box
               sx={{
@@ -173,7 +190,7 @@ const Home = () => {
                 variant="outlined"
                 size="medium"
                 sx={{
-                  color: "white",
+                  color: "primary",
                   ":hover": { paddingLeft: "1rem" },
                   transition: "ease 0.3s",
                 }}
@@ -189,7 +206,7 @@ const Home = () => {
                   marginLeft: 2,
                   backgroundColor: "#f2f2f2",
                   ":hover": {
-                    backgroundColor: "#fede2b",
+                    backgroundColor: "primary.main",
                   },
                   transition: "ease 0.5s",
                 }}
@@ -201,22 +218,34 @@ const Home = () => {
               <Stack direction="row" spacing={1} justifyContent="center">
                 <IconButton aria-label="email">
                   <EmailIcon
-                    sx={{ color: "#f2f2f2", ":hover": { color: "#fede2b" } }}
+                    sx={{
+                      color: "#f2f2f2",
+                      ":hover": { color: "primary.main" },
+                    }}
                   />
                 </IconButton>
                 <IconButton aria-label="github">
                   <GitHubIcon
-                    sx={{ color: "#f2f2f2", ":hover": { color: "#fede2b" } }}
+                    sx={{
+                      color: "#f2f2f2",
+                      ":hover": { color: "primary.main" },
+                    }}
                   />
                 </IconButton>
                 <IconButton aria-label="twitter">
                   <TwitterIcon
-                    sx={{ color: "#f2f2f2", ":hover": { color: "#fede2b" } }}
+                    sx={{
+                      color: "#f2f2f2",
+                      ":hover": { color: "primary.main" },
+                    }}
                   />
                 </IconButton>
                 <IconButton aria-label="linkedIn">
                   <LinkedInIcon
-                    sx={{ color: "#f2f2f2", ":hover": { color: "#fede2b" } }}
+                    sx={{
+                      color: "#f2f2f2",
+                      ":hover": { color: "primary.main" },
+                    }}
                   />
                 </IconButton>
               </Stack>
