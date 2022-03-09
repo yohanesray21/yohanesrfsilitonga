@@ -3,6 +3,7 @@ import React from "react";
 import About from "./components/About";
 import Home from "./components/Home";
 import Navbar from "./components/Navbar";
+import FeaturedProject from "./components/FeaturedProjects";
 
 const theme = createTheme({
   palette: {
@@ -11,11 +12,6 @@ const theme = createTheme({
       dark: "#0a192f",
       light: "#f2f2f2",
     },
-    // secondary: {
-    //   primary: "#ccd6f6",
-    //
-    //   dark: "#000",
-    // },
   },
   typography: {
     fontFamily: "Bitter, sans-serif",
@@ -29,6 +25,7 @@ const App = () => {
       <Navbar />
       <Home />
       <About />
+      <FeaturedProject />
     </ThemeProvider>
   );
 };

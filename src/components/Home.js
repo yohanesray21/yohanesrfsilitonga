@@ -12,6 +12,7 @@ import EmailIcon from "@mui/icons-material/Email";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import MainButton from "../buttons/MainButton";
 
 const Home = () => {
   return (
@@ -47,18 +48,7 @@ const Home = () => {
               type and scrambled it to make a type specimen book.
             </Typography>
             <Box sx={{ marginTop: "2rem" }}>
-              <Button
-                variant="outlined"
-                size="large"
-                sx={{
-                  color: "primary",
-                  ":hover": { paddingLeft: "1rem" },
-                  transition: "ease 0.3s",
-                }}
-                endIcon={<ArrowForwardIcon />}
-              >
-                More About me
-              </Button>
+              <MainButton title="MORE ABOUT ME" />
               <Button
                 variant="contained"
                 size="large"

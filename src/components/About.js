@@ -1,24 +1,9 @@
-import {
-  Box,
-  Container,
-  Fade,
-  FormControlLabel,
-  Paper,
-  Switch,
-  Typography,
-} from "@mui/material";
-import { borderRadius, height } from "@mui/system";
+import { Box, Container, Typography } from "@mui/material";
 import React from "react";
 import CollapseButton from "./CollapseButton";
 import CollapseButtonResponsive from "./CollapseButtonResponsive";
 
-const About = () => {
-  const [checked, setChecked] = React.useState(false);
-
-  const handleChange = () => {
-    setChecked((prev) => !prev);
-  };
-
+const About = ({ children }) => {
   return (
     <Box sx={{ backgroundColor: "primary.dark", pb: 10, pt: 1 }}>
       <Container maxWidth="lg">
@@ -57,7 +42,6 @@ const About = () => {
               <Typography
                 variant="h2"
                 component="h5"
-                mb={5}
                 fontWeight="bold"
                 color="primary.main"
               >
