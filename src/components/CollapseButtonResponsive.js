@@ -8,7 +8,7 @@ import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import { Box } from "@mui/system";
 import { LinearProgress, Typography } from "@mui/material";
 
-const CollapseButton = () => {
+const CollapseButtonResponsive = () => {
   const [openHistory, setOpenHistory] = React.useState(false);
   const [openExperience, setOpenExperience] = React.useState(false);
   const [openSkills, setOpenSkills] = React.useState(false);
@@ -63,6 +63,7 @@ const CollapseButton = () => {
             ever since the 1500s, when an unknown printer took a galley of type
             and scrambled it to make a type specimen book.
             <br />
+            <br />
             <span> Thanks for reading 😊</span>
           </Typography>
         </Box>
@@ -86,14 +87,11 @@ const CollapseButton = () => {
       </ListItemButton>
       <Collapse in={openExperience} timeout="auto" unmountOnExit>
         <Box mt={2} pl={8}>
-          <Box display="flex" flexDirection="row" alignItems="center">
+          <Box display="flex" flexDirection="column" alignItems="center">
             <Typography variant="h5" fontWeight="bold">
               Front End Developer Internship
             </Typography>
-            <Box ml={2} width={30}>
-              <LinearProgress />
-            </Box>
-            <Typography variant="h5" ml={2} fontWeight="semibold">
+            <Typography variant="h5" fontWeight="semibold" mt={2}>
               PT XTEND OFFICE MANAGEMENT SYSTEM
             </Typography>
           </Box>
@@ -140,52 +138,52 @@ const CollapseButton = () => {
         </Typography>
       </ListItemButton>
       <Collapse in={openSkills} timeout="auto" unmountOnExit>
-        <Box mt={2} pl={8}>
+        <Box mt={2} pl={8} display="flex" flexDirection="column">
           <Typography variant="h5" mt={1} sx={{ textDecoration: "underline" }}>
             Languages
           </Typography>
           <Typography variant="h6">
-            <ul style={{ display: "flex" }}>
+            <ul style={{ display: "flex", flexDirection: "column" }}>
               <li>HTML</li>
-              <li style={{ marginLeft: 40 }}>CSS</li>
-              <li style={{ marginLeft: 40 }}>JAVASCRIPT</li>
+              <li>CSS</li>
+              <li>JAVASCRIPT</li>
             </ul>
           </Typography>
         </Box>
-        <Box mt={2} pl={8}>
+        <Box mt={2} pl={8} display="flex" flexDirection="column">
           <Typography variant="h5" mt={1} sx={{ textDecoration: "underline" }}>
             Framework & Libraries
           </Typography>
           <Typography variant="h6">
-            <ul style={{ display: "flex" }}>
+            <ul style={{ display: "flex", flexDirection: "column" }}>
               <li>REACT</li>
-              <li style={{ marginLeft: 40 }}>REACT REDUX</li>
-              <li style={{ marginLeft: 40 }}>MUI</li>
-              <li style={{ marginLeft: 40 }}>CHAKRA UI</li>
-              <li style={{ marginLeft: 40 }}>BOOTSTRAP</li>
+              <li>REACT REDUX</li>
+              <li>MUI</li>
+              <li>CHAKRA UI</li>
+              <li>BOOTSTRAP</li>
             </ul>
           </Typography>
         </Box>
-        <Box mt={2} pl={8}>
+        <Box mt={2} pl={8} display="flex" flexDirection="column">
           <Typography variant="h5" mt={1} sx={{ textDecoration: "underline" }}>
             Design Tools
           </Typography>
           <Typography variant="h6">
-            <ul style={{ display: "flex" }}>
+            <ul style={{ display: "flex", flexDirection: "column" }}>
               <li>FIGMA</li>
-              <li style={{ marginLeft: 40 }}>CANVA</li>
-              <li style={{ marginLeft: 40 }}>BALSAMIQ</li>
+              <li>CANVA</li>
+              <li>BALSAMIQ</li>
             </ul>
           </Typography>
         </Box>
-        <Box mt={2} pl={8}>
+        <Box mt={2} pl={8} display="flex" flexDirection="column">
           <Typography variant="h5" mt={1} sx={{ textDecoration: "underline" }}>
             Version Control
           </Typography>
           <Typography variant="h6">
-            <ul style={{ display: "flex" }}>
+            <ul style={{ display: "flex", flexDirection: "column" }}>
               <li>GIT</li>
-              <li style={{ marginLeft: 40 }}>GITHUB</li>
+              <li>GITHUB</li>
             </ul>
           </Typography>
         </Box>
@@ -204,4 +202,4 @@ const CollapseButton = () => {
   );
 };
 
-export default CollapseButton;
+export default CollapseButtonResponsive;
