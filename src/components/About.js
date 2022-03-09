@@ -88,7 +88,7 @@ const About = () => {
           }}
         >
           <Box display="flex" alignItems="center" justifyContent="center">
-            <Typography variant="h3" sx={{ color: "primary.light" }}>
+            <Typography variant="h4" sx={{ color: "primary.light" }}>
               About Me
             </Typography>
           </Box>
@@ -116,7 +116,7 @@ const About = () => {
             </Box>
             <Box sx={{ color: "#f2f2f2" }}>
               <Typography
-                variant="h2"
+                variant="h3"
                 component="h5"
                 mb={1}
                 fontWeight="bold"
@@ -124,9 +124,9 @@ const About = () => {
                 mt={1}
                 textAlign="center"
               >
-                Hello, I'm Yohanes
+                Hello, I'm Yohanes 🙂
               </Typography>
-              <Typography variant="h5" component="p" textAlign="center">
+              <Typography variant="h6" component="p" textAlign="center">
                 Lorem Ipsum is simply dummy text of the printing and typesetting
                 industry. Lorem Ipsum has been the industry's standard dummy
                 text ever since the 1500s, when an unknown printer took a galley
