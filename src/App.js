@@ -4,6 +4,7 @@ import About from "./components/About";
 import Home from "./components/Home";
 import Navbar from "./components/Navbar";
 import FeaturedProject from "./components/FeaturedProjects";
+import ContactForm from "./components/ContactForm";
 
 const theme = createTheme({
   palette: {
@@ -26,6 +27,7 @@ const App = () => {
       <Home />
       <About />
       <FeaturedProject />
+      <ContactForm />
     </ThemeProvider>
   );
 };
