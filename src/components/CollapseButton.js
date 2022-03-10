@@ -9,7 +9,7 @@ import { Box } from "@mui/system";
 import { LinearProgress, Typography } from "@mui/material";
 
 const CollapseButton = () => {
-  const [openHistory, setOpenHistory] = React.useState(false);
+  const [openHistory, setOpenHistory] = React.useState(true);
   const [openExperience, setOpenExperience] = React.useState(false);
   const [openSkills, setOpenSkills] = React.useState(false);
 

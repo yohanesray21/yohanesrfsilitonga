@@ -28,7 +28,12 @@ const FeaturedProjects = () => {
             },
           }}
         >
-          <Box display="flex" alignItems="center" justifyContent="center">
+          <Box
+            display="flex"
+            alignItems="center"
+            justifyContent="center"
+            pt={2}
+          >
             <Typography variant="h3" color="primary.light">
               Featured Projects 💻
             </Typography>
@@ -72,7 +77,7 @@ const FeaturedProjects = () => {
               <MainButton title="VISIT SITE" />
             </Box>
           </Box>
-          <Divider sx={{ marginBottom: 5 }} variant="middle" color="white" />
+          <Divider sx={{ marginBottom: 5 }} color="white" />
           <Box display="flex" flexDirection="row" mb={5}>
             <Box display="flex" flexDirection="column" mr={5}>
               <Typography variant="h5" color="primary">
@@ -100,6 +105,7 @@ const FeaturedProjects = () => {
               />
             </Box>
           </Box>
+          <Divider sx={{ marginBottom: 5 }} color="white" />
         </Box>
 
         {/* Responsive */}
@@ -171,7 +177,7 @@ const FeaturedProjects = () => {
               <MainButton title="VISIT SITE" />
             </Box>
           </Box>
-          <Divider sx={{ marginBottom: 5 }} variant="middle" color="white" />
+          <Divider sx={{ marginBottom: 5 }} color="white" />
           <Box display="flex" flexDirection="column" mb={5}>
             <Box display="flex" justifyContent="center" mb={2}>
               <img
@@ -204,6 +210,7 @@ const FeaturedProjects = () => {
               <MainButton title="VISIT SITE" />
             </Box>
           </Box>
+          <Divider sx={{ marginBottom: 5 }} color="white" />
         </Box>
       </Container>
     </Box>

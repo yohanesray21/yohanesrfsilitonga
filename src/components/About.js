@@ -26,7 +26,12 @@ const About = () => {
             },
           }}
         >
-          <Box display="flex" alignItems="center" justifyContent="center">
+          <Box
+            display="flex"
+            alignItems="center"
+            justifyContent="center"
+            pt={2}
+          >
             <Typography variant="h3" sx={{ color: "primary.light" }}>
               About Me
             </Typography>

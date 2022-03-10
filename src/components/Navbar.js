@@ -16,7 +16,7 @@ const pages = ["HOME", "ABOUT", "PROJECT", "CONTACT"];
 
 const ITEM_HEIGHT = 48;
 
-const Navbar = () => {
+const Navbar = ({ themeStorage, setThemeStorage }) => {
   const [anchorEl, setAnchorEl] = React.useState(null);
 
   const open = Boolean(anchorEl);
@@ -67,7 +67,7 @@ const Navbar = () => {
                   variant="body1"
                   key={page}
                   sx={{
-                    color: "white",
+                    color: "primary.light",
                     ":hover": {
                       color: "primary.main",
                     },
@@ -84,7 +84,16 @@ const Navbar = () => {
             </Box>
 
             <Box sx={{ flexGrow: 0 }}>
-              <MaterialUISwitch defaultChecked />
+              <MaterialUISwitch
+                checked={themeStorage === "light" ? false : true}
+                onChange={() => {
+                  if (themeStorage === "dark") {
+                    setThemeStorage("light");
+                  } else {
+                    setThemeStorage("dark");
+                  }
+                }}
+              />
             </Box>
           </Box>
 
@@ -109,7 +118,7 @@ const Navbar = () => {
                 aria-expanded={open ? "true" : undefined}
                 aria-haspopup="true"
                 onClick={handleClick}
-                sx={{ color: "white" }}
+                sx={{ color: "primary.light" }}
               >
                 <MenuIcon />
               </IconButton>
@@ -151,7 +160,16 @@ const Navbar = () => {
 
             {/* Switch */}
             <Box sx={{ display: "flex" }}>
-              <MaterialUISwitch defaultChecked />
+              <MaterialUISwitch
+                checked={themeStorage === "light" ? false : true}
+                onChange={() => {
+                  if (themeStorage === "dark") {
+                    setThemeStorage("light");
+                  } else {
+                    setThemeStorage("dark");
+                  }
+                }}
+              />
             </Box>
           </Box>
         </Toolbar>
