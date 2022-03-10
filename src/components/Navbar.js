@@ -12,7 +12,7 @@ import { Box } from "@mui/system";
 import MenuIcon from "@mui/icons-material/Menu";
 import { MaterialUISwitch } from "../buttons/MaterialUISwitch";
 
-const pages = ["HOME", "PROJECT", "ABOUT", "CONTACT"];
+const pages = ["HOME", "ABOUT", "PROJECT", "CONTACT"];
 
 const ITEM_HEIGHT = 48;
 
@@ -42,7 +42,7 @@ const Navbar = () => {
             width="100%"
             sx={{ display: { xs: "none", md: "flex" } }}
           >
-            <Box sx={{ flexGrow: 0 }} display="flex">
+            <Box sx={{ flexGrow: 0 }} display="flex" hre>
               <img
                 src="../../images/Vector.svg"
                 alt="Yohanes Silitonga"
@@ -73,8 +73,10 @@ const Navbar = () => {
                     },
                     transition: "color 0.5s",
                     fontWeight: "semibold",
+                    scrollBehavior: "smooth",
                   }}
                   underline="hover"
+                  href={`#${page.toLowerCase()}`}
                 >
                   {page}
                 </Button>
@@ -129,8 +131,9 @@ const Navbar = () => {
                 {pages.map((option) => (
                   <MenuItem
                     key={option}
-                    selected={option === "Pyxis"}
+                    selected={option === "home"}
                     onClick={handleClose}
+                    href={`#${option.toLowerCase()}`}
                   >
                     {option}
                   </MenuItem>

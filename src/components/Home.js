@@ -17,7 +17,7 @@ import SocialMedia from "./SocialMedia";
 
 const Home = () => {
   return (
-    <Box sx={{ backgroundColor: "primary.dark", pt: 1 }}>
+    <Box sx={{ backgroundColor: "primary.dark", pt: 1 }} id="home">
       <Container maxWidth="lg">
         <Box
           sx={{
@@ -91,6 +91,7 @@ const Home = () => {
             flexDirection: "column",
             height: "100vh",
           }}
+          id="home"
         >
           <Box
             sx={{

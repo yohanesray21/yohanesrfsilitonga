@@ -13,6 +13,7 @@ const FeaturedProjects = () => {
         // display: "flex",
         // alignItems: "flex-start",
       }}
+      id="project"
     >
       <Container maxWidth="lg">
         {/* Desktop */}
@@ -112,6 +113,7 @@ const FeaturedProjects = () => {
               flexDirection: "column",
             },
           }}
+          id="project"
         >
           <Box display="flex" alignItems="center" justifyContent="center">
             <Typography variant="h4" color="primary.light">

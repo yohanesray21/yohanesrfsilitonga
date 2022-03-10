@@ -3,10 +3,17 @@ import React from "react";
 import CollapseButton from "./CollapseButton";
 import CollapseButtonResponsive from "./CollapseButtonResponsive";
 
-const About = ({ children }) => {
+const About = () => {
   return (
-    <Box sx={{ backgroundColor: "primary.dark", pb: 10, pt: 1 }}>
-      <Container maxWidth="lg">
+    <Box
+      sx={{
+        backgroundColor: "primary.dark",
+        pb: 10,
+        pt: 1,
+        scrollBehavior: "smooth",
+      }}
+    >
+      <Container maxWidth="lg" id="about">
         {/* Desktop */}
         <Box
           p="0 24px"
@@ -70,6 +77,7 @@ const About = ({ children }) => {
               flexDirection: "column",
             },
           }}
+          id="about"
         >
           <Box display="flex" alignItems="center" justifyContent="center">
             <Typography variant="h4" sx={{ color: "primary.light" }}>

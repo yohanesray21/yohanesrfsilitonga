@@ -1,9 +1,7 @@
 import React from "react";
-import { Container, Divider, TextField, Typography } from "@mui/material";
+import { Container, TextField, Typography } from "@mui/material";
 import { Box } from "@mui/system";
-import MainButton from "../buttons/MainButton";
 import SocialMedia from "./SocialMedia";
-import { alpha, styled } from "@mui/material/styles";
 
 const ContactForm = () => {
   return (
@@ -13,6 +11,7 @@ const ContactForm = () => {
         pb: 10,
         pt: 1,
       }}
+      id="contact"
     >
       <Container maxWidth="lg">
         {/* Desktop */}
