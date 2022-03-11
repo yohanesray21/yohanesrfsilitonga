@@ -49,7 +49,7 @@ const Home = () => {
               type and scrambled it to make a type specimen book.
             </Typography>
             <Box sx={{ marginTop: "2rem" }}>
-              <MainButton title="MORE ABOUT ME" />
+              <MainButton title="MORE ABOUT ME" href="#about" />
               <Button
                 variant="contained"
                 size="large"
@@ -62,6 +62,8 @@ const Home = () => {
                   transition: "ease 0.5s",
                   marginLeft: 2,
                 }}
+                href="https://drive.google.com/file/d/1m_pS0mC8V5m-yf06Ck77DyyJ7JzYYYEO/view?usp=sharing"
+                target="_blank"
               >
                 Resume
               </Button>
@@ -152,6 +154,7 @@ const Home = () => {
                   transition: "ease 0.3s",
                 }}
                 endIcon={<ArrowForwardIcon />}
+                href="#about"
               >
                 More About me
               </Button>
@@ -167,6 +170,8 @@ const Home = () => {
                   transition: "ease 0.5s",
                   marginLeft: 2,
                 }}
+                href="https://drive.google.com/file/d/1m_pS0mC8V5m-yf06Ck77DyyJ7JzYYYEO/view?usp=sharing"
+                target="_blank"
               >
                 Resume
               </Button>

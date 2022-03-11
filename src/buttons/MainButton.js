@@ -2,7 +2,7 @@ import { Button } from "@mui/material";
 import React from "react";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 
-const MainButton = ({ title }) => {
+const MainButton = ({ title, href, target }) => {
   return (
     <Button
       variant="outlined"
@@ -13,6 +13,8 @@ const MainButton = ({ title }) => {
         transition: "ease 0.3s",
       }}
       endIcon={<ArrowForwardIcon />}
+      href={href}
+      target={target}
     >
       {title}
     </Button>

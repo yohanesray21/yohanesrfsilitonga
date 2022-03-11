@@ -108,8 +108,6 @@ const ContactForm = () => {
             <Box
               display="flex"
               flexGrow={0}
-              border="1px solid #f2f2f2"
-              borderRadius={2}
               ml={6}
               py={3}
               px={1}
@@ -143,7 +141,12 @@ const ContactForm = () => {
                 mx={3}
               >
                 <Typography>👉</Typography>
-                <Link sx={{ cursor: "pointer" }} my={3}>
+                <Link
+                  sx={{ cursor: "pointer" }}
+                  my={3}
+                  href="https://drive.google.com/file/d/1m_pS0mC8V5m-yf06Ck77DyyJ7JzYYYEO/view?usp=sharing"
+                  target="_blank"
+                >
                   Download My Resume
                 </Link>
               </Box>
@@ -247,8 +250,6 @@ const ContactForm = () => {
             <Box
               display="flex"
               flexGrow={0}
-              border="1px solid #f2f2f2"
-              borderRadius={2}
               mt={2}
               ml={1}
               py={3}
@@ -282,7 +283,12 @@ const ContactForm = () => {
                 mx={2}
               >
                 <Typography>👉</Typography>
-                <Link sx={{ cursor: "pointer" }} my={3}>
+                <Link
+                  sx={{ cursor: "pointer" }}
+                  my={3}
+                  href="https://drive.google.com/file/d/1m_pS0mC8V5m-yf06Ck77DyyJ7JzYYYEO/view?usp=sharing"
+                  target="_blank"
+                >
                   Download My Resume
                 </Link>
               </Box>

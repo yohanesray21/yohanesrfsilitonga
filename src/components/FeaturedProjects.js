@@ -74,7 +74,11 @@ const FeaturedProjects = () => {
                   <li style={{ marginLeft: 40 }}>BALSAMIQ</li>
                 </ul>
               </Typography>
-              <MainButton title="VISIT SITE" />
+              <MainButton
+                title="VISIT SITE"
+                href="https://xtendid-smo.herokuapp.com/"
+                target="_blank"
+              />
             </Box>
           </Box>
           <Divider sx={{ marginBottom: 5 }} color="white" />
@@ -95,7 +99,11 @@ const FeaturedProjects = () => {
                   <li style={{ marginLeft: 40 }}>BALSAMIQ</li>
                 </ul>
               </Typography>
-              <MainButton title="VISIT SITE" />
+              <MainButton
+                title="VISIT SITE"
+                href="https://xtendid-smo.herokuapp.com/"
+                target="_blank"
+              />
             </Box>
             <Box>
               <img
@@ -174,7 +182,11 @@ const FeaturedProjects = () => {
                   <li style={{ marginLeft: 40 }}>BALSAMIQ</li>
                 </ul>
               </Typography>
-              <MainButton title="VISIT SITE" />
+              <MainButton
+                title="VISIT SITE"
+                href="https://xtendid-smo.herokuapp.com/"
+                target="_blank"
+              />
             </Box>
           </Box>
           <Divider sx={{ marginBottom: 5 }} color="white" />
@@ -207,7 +219,11 @@ const FeaturedProjects = () => {
                   <li style={{ marginLeft: 40 }}>BALSAMIQ</li>
                 </ul>
               </Typography>
-              <MainButton title="VISIT SITE" />
+              <MainButton
+                title="VISIT SITE"
+                href="https://xtendid-smo.herokuapp.com/"
+                target="_blank"
+              />
             </Box>
           </Box>
           <Divider sx={{ marginBottom: 5 }} color="white" />

@@ -10,7 +10,10 @@ const SocialMedia = () => {
   return (
     <Box sx={{ paddingTop: 2 }}>
       <Stack direction="row" spacing={1}>
-        <IconButton aria-label="email">
+        <IconButton
+          aria-label="email"
+          href="mailto:yohanessilitonga21@gmail.com"
+        >
           <EmailIcon
             sx={{
               color: "primary.light",
@@ -18,7 +21,11 @@ const SocialMedia = () => {
             }}
           />
         </IconButton>
-        <IconButton aria-label="github">
+        <IconButton
+          aria-label="github"
+          href="https://github.com/yohanesray21"
+          target="_blank"
+        >
           <GitHubIcon
             sx={{
               color: "primary.light",
@@ -26,7 +33,11 @@ const SocialMedia = () => {
             }}
           />
         </IconButton>
-        <IconButton aria-label="twitter">
+        <IconButton
+          aria-label="twitter"
+          href="https://twitter.com/YohanesRay21"
+          target="_blank"
+        >
           <TwitterIcon
             sx={{
               color: "primary.light",
@@ -34,7 +45,11 @@ const SocialMedia = () => {
             }}
           />
         </IconButton>
-        <IconButton aria-label="linkedIn">
+        <IconButton
+          aria-label="linkedIn"
+          href="https://www.linkedin.com/in/yohanes-silitonga/"
+          target="_blank"
+        >
           <LinkedInIcon
             sx={{
               color: "primary.light",
