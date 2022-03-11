@@ -30,7 +30,7 @@ const Home = () => {
             sx={{
               display: "flex",
               flexDirection: "column",
-              color: "white",
+              color: "primary",
               flexGrow: 1,
               justifyContent: "center",
             }}
@@ -54,8 +54,8 @@ const Home = () => {
                 variant="contained"
                 size="large"
                 sx={{
-                  color: "black",
-                  backgroundColor: "#f2f2f2",
+                  color: "primary",
+                  backgroundColor: "primary.light",
                   ":hover": {
                     backgroundColor: "primary.main",
                   },
@@ -110,7 +110,7 @@ const Home = () => {
             sx={{
               display: "flex",
               flexDirection: "column",
-              color: "white",
+              color: "primary",
               flexGrow: 1,
               justifyContent: "flex-start",
               alignContent: "center",
@@ -159,13 +159,13 @@ const Home = () => {
                 variant="contained"
                 size="medium"
                 sx={{
-                  color: "black",
-                  marginLeft: 2,
-                  backgroundColor: "#f2f2f2",
+                  color: "primary",
+                  backgroundColor: "primary.light",
                   ":hover": {
                     backgroundColor: "primary.main",
                   },
                   transition: "ease 0.5s",
+                  marginLeft: 2,
                 }}
               >
                 Resume

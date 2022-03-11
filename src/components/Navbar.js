@@ -44,7 +44,11 @@ const Navbar = ({ themeStorage, setThemeStorage }) => {
           >
             <Box sx={{ flexGrow: 0 }} display="flex" hre>
               <img
-                src="../../images/Vector.svg"
+                src={
+                  themeStorage === "dark"
+                    ? "../../images/Vector.svg"
+                    : "../../images/Logov2.svg"
+                }
                 alt="Yohanes Silitonga"
                 style={{
                   height: "3rem",
@@ -152,7 +156,11 @@ const Navbar = ({ themeStorage, setThemeStorage }) => {
 
             <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
               <img
-                src="../../images/Vector.svg"
+                src={
+                  themeStorage === "dark"
+                    ? "../../images/Vector.svg"
+                    : "../../images/Logov2.svg"
+                }
                 alt="Yohanes Silitonga"
                 style={{ height: "2rem", cursor: "pointer" }}
               />

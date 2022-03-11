@@ -3,13 +3,13 @@ import { Button, Container, Link, TextField, Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import SocialMedia from "./SocialMedia";
 import SendIcon from "@mui/icons-material/Send";
+import Copyright from "./Copyright";
 //
 const ContactForm = () => {
   return (
     <Box
       sx={{
         backgroundColor: "primary.dark",
-        pb: 10,
         pt: 1,
       }}
       id="contact"
@@ -88,7 +88,7 @@ const ContactForm = () => {
                     variant="contained"
                     size="large"
                     sx={{
-                      color: "black",
+                      color: "primary",
                       backgroundColor: "primary.light",
                       ":hover": {
                         backgroundColor: "primary.main",
@@ -148,6 +148,9 @@ const ContactForm = () => {
                 </Link>
               </Box>
             </Box>
+          </Box>
+          <Box mt={20}>
+            <Copyright />
           </Box>
         </Box>
         {/* Responsive */}
@@ -223,7 +226,7 @@ const ContactForm = () => {
                     variant="contained"
                     size="large"
                     sx={{
-                      color: "black",
+                      color: "primary",
                       backgroundColor: "primary.light",
                       ":hover": {
                         backgroundColor: "primary.main",
@@ -284,6 +287,9 @@ const ContactForm = () => {
                 </Link>
               </Box>
             </Box>
+          </Box>
+          <Box>
+            <Copyright />
           </Box>
         </Box>
       </Container>

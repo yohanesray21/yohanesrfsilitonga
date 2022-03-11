@@ -13,7 +13,7 @@ const SocialMedia = () => {
         <IconButton aria-label="email">
           <EmailIcon
             sx={{
-              color: "#f2f2f2",
+              color: "primary.light",
               ":hover": { color: "primary.main" },
             }}
           />
@@ -21,7 +21,7 @@ const SocialMedia = () => {
         <IconButton aria-label="github">
           <GitHubIcon
             sx={{
-              color: "#f2f2f2",
+              color: "primary.light",
               ":hover": { color: "primary.main" },
             }}
           />
@@ -29,7 +29,7 @@ const SocialMedia = () => {
         <IconButton aria-label="twitter">
           <TwitterIcon
             sx={{
-              color: "#f2f2f2",
+              color: "primary.light",
               ":hover": { color: "primary.main" },
             }}
           />
@@ -37,7 +37,7 @@ const SocialMedia = () => {
         <IconButton aria-label="linkedIn">
           <LinkedInIcon
             sx={{
-              color: "#f2f2f2",
+              color: "primary.light",
               ":hover": { color: "primary.main" },
             }}
           />

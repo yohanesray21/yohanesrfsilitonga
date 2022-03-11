@@ -50,7 +50,7 @@ const About = () => {
                 alt="yohanes"
               />
             </Box>
-            <Box sx={{ color: "#f2f2f2", marginLeft: 6 }}>
+            <Box sx={{ marginLeft: 6 }} color="primary.main">
               <Typography
                 variant="h2"
                 component="h5"
@@ -59,7 +59,7 @@ const About = () => {
               >
                 Hello, I'm Yohanes 🙂
               </Typography>
-              <Typography variant="h5" component="p">
+              <Typography variant="h5" component="p" color="primary.light">
                 Lorem Ipsum is simply dummy text of the printing and typesetting
                 industry. Lorem Ipsum has been the industry's standard dummy
                 text ever since the 1500s, when an unknown printer took a galley
@@ -123,7 +123,12 @@ const About = () => {
               >
                 Hello, I'm Yohanes 🙂
               </Typography>
-              <Typography variant="h6" component="p" textAlign="center">
+              <Typography
+                variant="h6"
+                component="p"
+                textAlign="center"
+                color="primary.light"
+              >
                 Lorem Ipsum is simply dummy text of the printing and typesetting
                 industry. Lorem Ipsum has been the industry's standard dummy
                 text ever since the 1500s, when an unknown printer took a galley

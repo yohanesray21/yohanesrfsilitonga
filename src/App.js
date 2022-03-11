@@ -5,7 +5,8 @@ import Home from "./components/Home";
 import Navbar from "./components/Navbar";
 import FeaturedProject from "./components/FeaturedProjects";
 import ContactForm from "./components/ContactForm";
-import { amber, deepOrange, grey } from "@mui/material/colors";
+import Copyright from "./components/Copyright";
+import { amber, grey } from "@mui/material/colors";
 import { useLocalStorage } from "./hooks/useLocalStorage";
 
 const getDesignTokens = (mode) => ({
@@ -17,6 +18,11 @@ const getDesignTokens = (mode) => ({
         main: "#64ffda", //teal
         dark: "#0a192f",
         light: "#f2f2f2",
+      }),
+      ...(mode === "light" && {
+        main: "#2b2929",
+        dark: "#f2f0ee",
+        light: "#000",
       }),
     },
     ...(mode === "dark" && {
