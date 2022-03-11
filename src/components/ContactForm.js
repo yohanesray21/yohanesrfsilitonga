@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Button, Container, Link, TextField, Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import SocialMedia from "./SocialMedia";
@@ -6,6 +6,11 @@ import SendIcon from "@mui/icons-material/Send";
 import Copyright from "./Copyright";
 //
 const ContactForm = () => {
+  const [name, setName] = useState(null);
+  const [email, setEmail] = useState(null);
+  const [message, setMessage] = useState(null);
+
+  console.log(name);
   return (
     <Box
       sx={{
@@ -52,6 +57,8 @@ const ContactForm = () => {
             <Box display="flex" flexDirection="column" flexGrow={1}>
               <Box
                 component="form"
+                action="https://formsubmit.co/yohanesrfsilitonga21@gmail.com"
+                method="post"
                 sx={{
                   "& .MuiTextField-root": { m: 1, width: "100%" },
                 }}
@@ -66,6 +73,11 @@ const ContactForm = () => {
                   id="name"
                   sx={{ color: "primary" }}
                   autoComplete="off"
+                  type="text"
+                  name="name"
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
+                  required
                 />
                 <TextField
                   fullWidth
@@ -74,6 +86,10 @@ const ContactForm = () => {
                   sx={{ color: "primary" }}
                   autoComplete="off"
                   type="email"
+                  name="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  required
                 />
                 <TextField
                   fullWidth
@@ -82,9 +98,13 @@ const ContactForm = () => {
                   multiline
                   rows={9}
                   autoComplete="off"
+                  name="message"
+                  value={message}
+                  onChange={(e) => setMessage(e.target.value)}
                 />
                 <Box display="flex" m={1}>
                   <Button
+                    type="submit"
                     variant="contained"
                     size="large"
                     sx={{
@@ -240,6 +260,7 @@ const ContactForm = () => {
                       width: "100%",
                     }}
                     endIcon={<SendIcon sx={{ marginLeft: 1 }} />}
+                    onClick={() => console.log("hello")}
                   >
                     SEND
                   </Button>
