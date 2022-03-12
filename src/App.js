@@ -8,6 +8,7 @@ import ContactForm from "./components/ContactForm";
 import Copyright from "./components/Copyright";
 import { amber, grey } from "@mui/material/colors";
 import { useLocalStorage } from "./hooks/useLocalStorage";
+import Contact from "./components/Contact";
 
 const getDesignTokens = (mode) => ({
   palette: {
@@ -55,6 +56,7 @@ const App = ({ themeStorage, setThemeStorage }) => {
       <About />
       <FeaturedProject />
       <ContactForm />
+      {/* <Contact /> */}
     </>
   );
 };

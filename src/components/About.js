@@ -37,12 +37,12 @@ const About = () => {
             </Typography>
           </Box>
           <Box sx={{ display: "flex", marginTop: 5 }}>
-            <Box sx={{ opacity: 0.4, ":hover": { opacity: 1 } }}>
+            <Box>
               <img
                 src="../images/picture-1.jpg"
                 style={{
-                  width: "300px",
-                  height: "270px",
+                  width: "270px",
+                  height: "240px",
                   objectFit: "cover",
                   border: "2px solid #ddd",
                   borderRadius: "5px",
@@ -50,14 +50,15 @@ const About = () => {
                 alt="yohanes"
               />
             </Box>
-            <Box sx={{ marginLeft: 6 }} color="primary.main">
+            <Box ml={3} color="primary.main">
               <Typography
                 variant="h2"
                 component="h5"
                 fontWeight="bold"
                 color="primary.main"
+                mb={2}
               >
-                Hello, I'm Yohanes 🙂
+                Hello, I'm Yohanes 👋
               </Typography>
               <Typography variant="h5" component="p" color="primary.light">
                 Lorem Ipsum is simply dummy text of the printing and typesetting
@@ -121,7 +122,7 @@ const About = () => {
                 mt={1}
                 textAlign="center"
               >
-                Hello, I'm Yohanes 🙂
+                Hello, I'm Yohanes 👋
               </Typography>
               <Typography
                 variant="h6"

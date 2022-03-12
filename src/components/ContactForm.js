@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import emailjs from "emailjs-com";
 import { Button, Container, Link, TextField, Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import SocialMedia from "./SocialMedia";
@@ -6,11 +7,49 @@ import SendIcon from "@mui/icons-material/Send";
 import Copyright from "./Copyright";
 //
 const ContactForm = () => {
-  const [name, setName] = useState(null);
-  const [email, setEmail] = useState(null);
-  const [message, setMessage] = useState(null);
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+  const [emailSent, setEmailSent] = useState(false);
 
-  console.log(name);
+  const isValidEmail = () => {
+    const regex =
+      /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return regex.test(String(email).toLowerCase());
+  };
+
+  const validateEmail = isValidEmail(email);
+
+  const submit = (e) => {
+    e.preventDefault();
+
+    if (!validateEmail) {
+      alert("You have entered an invalid email address");
+    } else if (name && email && message && validateEmail) {
+      const serviceId = "service_89ej9h8";
+      const templateId = "template_oeat98f";
+      const userId = "vYAbZUHfmGHMLL_Nm";
+
+      const templateParams = {
+        name,
+        email,
+        message,
+      };
+
+      emailjs
+        .send(serviceId, templateId, templateParams, userId)
+        .then((response) => console.log(response))
+        .then((error) => console.log(error));
+
+      setName("");
+      setEmail("");
+      setMessage("");
+      setEmailSent(true);
+    } else {
+      alert("Please fill in all fields");
+    }
+  };
+
   return (
     <Box
       sx={{
@@ -57,8 +96,6 @@ const ContactForm = () => {
             <Box display="flex" flexDirection="column" flexGrow={1}>
               <Box
                 component="form"
-                action="https://formsubmit.co/yohanesrfsilitonga21@gmail.com"
-                method="post"
                 sx={{
                   "& .MuiTextField-root": { m: 1, width: "100%" },
                 }}
@@ -81,7 +118,7 @@ const ContactForm = () => {
                 />
                 <TextField
                   fullWidth
-                  label="Email : "
+                  label="Your Email Address : "
                   id="email"
                   sx={{ color: "primary" }}
                   autoComplete="off"
@@ -102,7 +139,7 @@ const ContactForm = () => {
                   value={message}
                   onChange={(e) => setMessage(e.target.value)}
                 />
-                <Box display="flex" m={1}>
+                <Box display="flex" m={1} justifyContent="space-between">
                   <Button
                     type="submit"
                     variant="contained"
@@ -118,9 +155,15 @@ const ContactForm = () => {
                       transition: "ease 0.5s",
                     }}
                     endIcon={<SendIcon sx={{ marginLeft: 1 }} />}
+                    onClick={submit}
                   >
                     SEND
                   </Button>
+                  {emailSent ? (
+                    <Box display="flex" alignItems="center">
+                      <Typography>Thanks for Your Massage!</Typography>
+                    </Box>
+                  ) : null}
                 </Box>
               </Box>
             </Box>
@@ -172,7 +215,7 @@ const ContactForm = () => {
               </Box>
             </Box>
           </Box>
-          <Box mt={20}>
+          <Box mt={20} mb={2}>
             <Copyright />
           </Box>
         </Box>
@@ -210,62 +253,78 @@ const ContactForm = () => {
 
           <Box display="flex" flexDirection="column" mb={5}>
             {/* Form */}
-            <Box display="flex" flexDirection="column" flexGrow={1}>
-              <Box
-                component="form"
-                sx={{
-                  "& .MuiTextField-root": { m: 1, width: "100%" },
-                }}
-                noValidate
-                display="flex"
-                flexDirection="column"
+
+            <Box
+              component="form"
+              sx={{
+                "& .MuiTextField-root": { m: 1, width: "100%" },
+              }}
+              noValidate
+              display="flex"
+              flexDirection="column"
+              autoComplete="off"
+            >
+              <TextField
+                fullWidth
+                label="Name : "
+                id="name"
+                sx={{ color: "primary" }}
                 autoComplete="off"
-              >
-                <TextField
-                  fullWidth
-                  label="Name : "
-                  id="name"
-                  sx={{ color: "primary" }}
-                  autoComplete="off"
-                />
-                <TextField
-                  fullWidth
-                  label="Email : "
-                  id="email"
-                  sx={{ color: "primary" }}
-                  autoComplete="off"
-                  type="email"
-                />
-                <TextField
-                  fullWidth
-                  id="message"
-                  label="Message : "
-                  multiline
-                  rows={9}
-                  autoComplete="off"
-                />
-                <Box display="flex" my={3} ml={1}>
-                  <Button
-                    variant="contained"
-                    size="large"
-                    sx={{
-                      color: "primary",
-                      backgroundColor: "primary.light",
-                      ":hover": {
-                        backgroundColor: "primary.main",
-                        paddingLeft: 2,
-                        fontWeight: "bold",
-                      },
-                      transition: "ease 0.5s",
-                      width: "100%",
-                    }}
-                    endIcon={<SendIcon sx={{ marginLeft: 1 }} />}
-                    onClick={() => console.log("hello")}
-                  >
-                    SEND
-                  </Button>
-                </Box>
+                type="text"
+                name="name"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                required
+              />
+              <TextField
+                fullWidth
+                label="Your Email Address : "
+                id="email"
+                sx={{ color: "primary" }}
+                autoComplete="off"
+                type="email"
+                name="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                required
+              />
+              <TextField
+                fullWidth
+                id="message"
+                label="Message : "
+                multiline
+                rows={9}
+                autoComplete="off"
+                name="message"
+                value={message}
+                onChange={(e) => setMessage(e.target.value)}
+              />
+              <Box display="flex" m={1} mr={-1}>
+                <Button
+                  variant="contained"
+                  size="large"
+                  sx={{
+                    color: "primary",
+                    backgroundColor: "primary.light",
+                    ":hover": {
+                      backgroundColor: "primary.main",
+                      paddingLeft: 4,
+                      fontWeight: "bold",
+                    },
+                    transition: "ease 0.5s",
+                    width: "100%",
+                  }}
+                  endIcon={<SendIcon sx={{ marginLeft: 1 }} />}
+                  onClick={submit}
+                >
+                  SEND
+                </Button>
               </Box>
+              {emailSent ? (
+                <Box display="flex" alignItems="center" ml={1}>
+                  <Typography>Thanks for Your Massage!</Typography>
+                </Box>
+              ) : null}
             </Box>
             {/* Social Media */}
             <Box
@@ -315,7 +374,7 @@ const ContactForm = () => {
               </Box>
             </Box>
           </Box>
-          <Box>
+          <Box mb={2}>
             <Copyright />
           </Box>
         </Box>
