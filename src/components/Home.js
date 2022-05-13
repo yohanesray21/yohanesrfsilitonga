@@ -43,10 +43,10 @@ const Home = () => {
               Frontend Developer
             </Typography>
             <Typography variant="h6" mt={2}>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book.
+              I am an empathetic, enthusiastic, responsible and hardworking
+              person. I can work as a team or work on my own initiative and I am
+              passionate about building software used by other people, and want
+              to learn new technology
             </Typography>
             <Box sx={{ marginTop: "2rem" }}>
               <MainButton title="MORE ABOUT ME" href="#about" />
@@ -133,10 +133,10 @@ const Home = () => {
               Frontend Developer
             </Typography>
             <Typography mt={2} textAlign="center">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book.
+              I am an empathetic, enthusiastic, responsible and hardworking
+              person. I can work as a team or work on my own initiative and I am
+              passionate about building software used by other people, and want
+              to learn new technology
             </Typography>
             <Box
               sx={{

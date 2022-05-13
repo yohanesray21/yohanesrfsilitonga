@@ -52,16 +52,15 @@ const CollapseButton = () => {
       <Collapse in={openHistory} timeout="auto" unmountOnExit>
         <Box pl={8}>
           <Typography variant="h6">
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book.
+            Hello! I'm Yohanes. I started studying web development in mid-2021,
+            which was the start of my internship. I decided to learn web
+            development from many tutorials as well as explore more about web
+            development especially frontend development which I found fun.
           </Typography>
           <Typography variant="h6" mt={1}>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book.
+            Although there are still many obstacles when studying, mainly
+            because I am still doing lectures on campus, I am still motivated to
+            learn as much as possible to make myself better and better.
             <br />
             <span> Thanks for reading 😊</span>
           </Typography>
@@ -112,10 +111,9 @@ const CollapseButton = () => {
                 javascript library, Chakra UI as Style Framework
               </li>
               <li>
-                Consumes the API provided by the Backend (Laravel) framework.
-                This application is used as an ERP application that integrates
-                several business processes within the company such as the
-                Inventory Module, Purchasing Module, and Sales Module.
+                Consumes the API provided by Backend. This application is used
+                as an ERP application for the company such as the Inventory
+                Module, Purchasing Module, and Sales Module
               </li>
               <li>Deployed on Heroku</li>
             </ul>
@@ -146,9 +144,10 @@ const CollapseButton = () => {
           </Typography>
           <Typography variant="h6">
             <ul style={{ display: "flex" }}>
-              <li>HTML</li>
-              <li style={{ marginLeft: 40 }}>CSS</li>
+              <li style={{ marginLeft: 40 }}>TYPESCRIPT</li>
               <li style={{ marginLeft: 40 }}>JAVASCRIPT</li>
+              <li style={{ marginLeft: 40 }}>CSS</li>
+              <li>HTML</li>
             </ul>
           </Typography>
         </Box>
